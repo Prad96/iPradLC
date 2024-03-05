@@ -4,7 +4,7 @@ class Solution:
         for i in s:
             if i != 'i':
                final_string+=i
-            if i=='i':
+            else:
                final_string=final_string[::-1]
         return final_string
           
