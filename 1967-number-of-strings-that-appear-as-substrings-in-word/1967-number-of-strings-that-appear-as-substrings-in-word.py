@@ -6,6 +6,7 @@ class Solution:
             for string in range(char, len(word)):
                 substring+=word[string]
                 substrings_word.append(substring)
+        substrings_word=tuple(substrings_word)
         for pattern in patterns:
             if pattern in substrings_word:
                 count+=1
