@@ -5,4 +5,4 @@ class Solution:
             uppercase,lowercase=letter.upper(), letter.lower()
             if uppercase in s and lowercase in s:
                 greatest_letter+=letter
-        return max(greatest_letter.upper(), default='')
+        return max(greatest_letter.upper(), default=greatest_letter)
