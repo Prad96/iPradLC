@@ -1,14 +1,20 @@
 class Solution:
-    def tribonacci(self, n: int) -> int:
+    def tribonacci(self, n: int) -> int: 
         if n==0:
-            return n
-        elif n == 1 or n == 2:
+            return 0
+        elif n>0 and n<3:
             return 1
-
-        trib=[0]*(n+1)
-        trib[0]=0
-        trib[1]=1
-        trib[2]=1
-        for i in range(3,n+1):
-            trib[i]=trib[i-3]+trib[i-2]+trib[i-1]
-        return trib[n]
+        tribonacci_numbers=[0]*(n+1)
+        tribonacci_numbers[0]=0
+        tribonacci_numbers[1]=1
+        tribonacci_numbers[2]=1
+        for num in range(3,n+1):
+            tribonacci_numbers[num]=tribonacci_numbers[num-3]+tribonacci_numbers[num-2]+tribonacci_numbers[num-1]
+        
+        ''''t[3]=2
+        [0,1,1,2,0,0,0]
+        [0,1,1,2,4,0,0]
+        [0,1,1,2,4,7,0]
+        [0,1,1,2,4,7,13]'''
+        
+        return tribonacci_numbers[num]
